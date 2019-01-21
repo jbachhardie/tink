@@ -19,6 +19,7 @@
     "tish": "./bin/tish.sh"
   },
   "scripts": {
+    "build": "webpack",
     "prerelease": "npm t",
     "release": "standard-version -s",
     "postrelease": "npm publish && git push --follow-tags",
@@ -28,6 +29,7 @@
     "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
   },
   "devDependencies": {
+    "fs-extra": "^7.0.1",
     "mkdirp": "^0.5.1",
     "nock": "^10.0.6",
     "standard": "^11.0.1",
@@ -35,7 +37,9 @@
     "tacks": "^1.2.7",
     "tap": "^12.1.1",
     "weallbehave": "*",
-    "weallcontribute": "*"
+    "weallcontribute": "*",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
   },
   "repository": {
     "type": "git",
